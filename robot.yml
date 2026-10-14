@@ -1,0 +1,42 @@
+name: Robot mensual Radar Urbano
+
+on:
+  push:
+    paths:
+      - "**.xlsx"           # se activa solo cuando subes el Excel del Ministerio
+  schedule:
+    - cron: "17 13 * * 1"   # cada lunes 08:17 hora de Ecuador intenta el portal
+  workflow_dispatch:        # boton "Run workflow" para correrlo a mano
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar librerias
+        run: pip install pandas openpyxl requests
+
+      - name: Procesar datos del Ministerio
+        id: robot
+        run: python robot.py
+        continue-on-error: true   # si falla, igual guarda estado.json con el error
+
+      - name: Borrar el Excel ya procesado
+        if: steps.robot.outcome == 'success'
+        run: git rm -q --ignore-unmatch -- '*.xlsx' 'entrada/*.xlsx' || true
+
+      - name: Guardar cambios
+        run: |
+          git config user.name "radar-urbano-robot"
+          git config user.email "robot@users.noreply.github.com"
+          git add datos/
+          git diff --cached --quiet || git commit -m "Actualizacion automatica de datos"
+          git push
