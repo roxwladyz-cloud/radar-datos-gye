@@ -1,0 +1,5 @@
+{
+  "revisado": "2026-10-14T19:44:07+00:00",
+  "ok": false,
+  "mensaje": "Se mantienen los datos anteriores. Error: No se pudo consultar el portal:\nhttps://datosabiertos.gob.ec: 403 Client Error: Forbidden for url: https://datosabiertos.gob.ec/api/3/action/package_show?id=homicidios-intencionales\nhttps://www.datosabiertos.gob.ec: 403 Client Error: Forbidden for url: https://www.datosabiertos.gob.ec/api/3/action/package_show?id=homicidios-intencionales\nhttps://datosabiertos.presidencia.gob.ec: 403 Client Error: Forbidden for url: https://datosabiertos.presidencia.gob.ec/api/3/action/package_show?id=homicidios-intencionales"
+}
