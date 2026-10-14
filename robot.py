@@ -9,13 +9,19 @@ Robot mensual de Radar Urbano.
 Si algo sale mal (portal caido, columnas cambiadas, datos sospechosos),
 NO toca el archivo anterior: la app sigue funcionando con los ultimos datos buenos.
 
+Plan B (el portal bloquea conexiones desde fuera de Ecuador):
+    Si subes el Excel del Ministerio al repositorio, el robot lo procesa solo
+    y luego lo borra. No hace falta editar nada.
+
 Uso:
-    python robot.py                  -> descarga del portal
+    python robot.py                  -> usa los .xlsx subidos; si no hay, intenta el portal
     python robot.py archivo.xlsx     -> procesa un Excel local (para pruebas)
 """
 
+import glob
 import io
 import json
+import re
 import os
 import sys
 import unicodedata
@@ -61,8 +67,15 @@ def buscar_url_excel():
             if not excels:
                 errores.append(f"{base}: sin archivos Excel")
                 continue
-            excels.sort(key=lambda x: x.get("last_modified") or x.get("created") or "",
-                        reverse=True)
+            # Solo los archivos de datos "pm_AAAA" (no diccionarios "dd" ni historicos)
+            def anio(x):
+                m = re.search(r"pm_(\d{4})", str(x.get("name", "")) + str(x.get("url", "")))
+                return int(m.group(1)) if m else 0
+            excels = [x for x in excels if anio(x) > 0]
+            if not excels:
+                errores.append(f"{base}: no hay archivo 'pm_AAAA'")
+                continue
+            excels.sort(key=lambda x: (anio(x), x.get("last_modified") or ""), reverse=True)
             return excels[0]["url"], excels[0].get("name", "")
         except Exception as e:  # probamos el siguiente portal
             errores.append(f"{base}: {e}")
@@ -146,21 +159,44 @@ def guardar_estado(ok, mensaje):
                    "ok": ok, "mensaje": mensaje}, f, ensure_ascii=False, indent=2)
 
 
+def excels_subidos():
+    """Excel que el usuario subio a mano (raiz del repositorio o carpeta entrada/)."""
+    archivos = glob.glob("*.xlsx") + glob.glob(os.path.join("entrada", "*.xlsx"))
+    return sorted(set(archivos))
+
+
+def ultimo_mes_publicado():
+    try:
+        with open(SALIDA, encoding="utf-8") as f:
+            return json.load(f).get("ultimo_mes", "")
+    except (OSError, ValueError):
+        return ""
+
+
 def main():
     try:
-        if len(sys.argv) > 1:
-            nombre = os.path.basename(sys.argv[1])
-            with open(sys.argv[1], "rb") as f:
-                contenido = f.read()
+        locales = sys.argv[1:] or excels_subidos()
+        if locales:
+            # Procesa todos los Excel subidos y se queda con el de datos mas recientes
+            resultado, nombre = None, ""
+            for ruta in locales:
+                with open(ruta, "rb") as f:
+                    candidato = procesar(f.read(), os.path.basename(ruta))
+                print(f"Leido {ruta}: hasta {candidato['ultimo_mes']}")
+                if resultado is None or candidato["ultimo_mes"] > resultado["ultimo_mes"]:
+                    resultado, nombre = candidato, os.path.basename(ruta)
         else:
             url, nombre = buscar_url_excel()
             print("Descargando:", url)
             r = requests.get(url, headers=CABECERAS, timeout=180)
             r.raise_for_status()
-            contenido = r.content
             nombre = nombre or url.rsplit("/", 1)[-1]
+            resultado = procesar(r.content, nombre)
 
-        resultado = procesar(contenido, nombre)
+        anterior = ultimo_mes_publicado()
+        if anterior and resultado["ultimo_mes"] < anterior:
+            raise ValueError(f"El archivo llega hasta {resultado['ultimo_mes']}, pero ya "
+                             f"tenemos datos hasta {anterior}. No se reemplaza.")
         resultado["generado"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
         os.makedirs("datos", exist_ok=True)
         with open(SALIDA, "w", encoding="utf-8") as f:
