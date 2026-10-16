@@ -1,12 +1,284 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Radar Urbano</title>
-  <meta http-equiv="refresh" content="0; url=app/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Radar Urbano</title>
+<meta name="description" content="Conoce el nivel de riesgo de un lugar del Gran Guayaquil antes de salir, con datos oficiales del Ministerio del Interior.">
+<meta name="theme-color" content="#193C80">
+<meta property="og:title" content="Radar Urbano">
+<meta property="og:description" content="Conoce el nivel de riesgo de un lugar de Guayaquil antes de salir, con datos oficiales.">
+<meta property="og:image" content="img/icono-512.png">
+<link rel="icon" href="img/icono-256.png">
+<link rel="apple-touch-icon" href="img/icono-256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* Layout: una columna centrada; banda azul de marca arriba, secciones claras debajo. */
+  :root {
+    --azul: #193C80;
+    --azul-oscuro: #0E2A63;
+    --plata: #D9E3F2;
+    --fondo: #F6F8FC;
+    --tarjeta: #FFFFFF;
+    --texto: #16213A;
+    --suave: #56627A;
+    --borde: #DCE3EF;
+    --ambar: #F4B740;
+    --verde: #2E7D32;
+    --naranja: #E65100;
+    --rojo: #C62828;
+    --display: "Sora", "Segoe UI", system-ui, sans-serif;
+    --cuerpo: "Manrope", "Segoe UI", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fondo: #0B1428;
+      --tarjeta: #121F3B;
+      --texto: #E8EEF9;
+      --suave: #A7B4CC;
+      --borde: #24355C;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font: 16px/1.6 var(--cuerpo);
+  }
+  a { color: inherit; }
+  .envoltura {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: max(18px, env(safe-area-inset-left, 0px));
+    padding-right: max(18px, env(safe-area-inset-right, 0px));
+  }
+
+  /* Banda principal */
+  .portada {
+    background: radial-gradient(120% 90% at 20% 0%, #2E5FB8 0%, var(--azul) 45%, var(--azul-oscuro) 100%);
+    color: #fff;
+    padding-block: calc(48px + env(safe-area-inset-top, 0px)) 56px;
+  }
+  .portada .envoltura {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 28px;
+    align-items: center;
+  }
+  .portada img {
+    width: 132px; height: 132px;
+    border-radius: 30px;
+    box-shadow: 0 18px 40px rgba(3, 12, 32, .45);
+  }
+  .portada h1 {
+    font-family: var(--display);
+    font-size: clamp(2.1rem, 6vw, 3.2rem);
+    line-height: 1.1;
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .portada p { margin: 0 0 22px; color: var(--plata); font-size: 1.1rem; max-width: 34em; }
+  .acciones { display: flex; flex-wrap: wrap; gap: 12px; }
+  .boton {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 22px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .boton:focus-visible { outline: 3px solid var(--ambar); outline-offset: 3px; }
+  .boton.principal { background: #fff; color: var(--azul); box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+  .boton.secundario { color: #fff; border: 1.5px solid rgba(255,255,255,.55); }
+  .boton:hover { transform: translateY(-1px); }
+  .datos-vivos {
+    margin-top: 22px;
+    font-size: .9rem;
+    color: var(--plata);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Secciones */
+  section { padding-block: 48px 8px; }
+  h2 {
+    font-family: var(--display);
+    font-size: 1.55rem;
+    margin: 0 0 6px;
+    text-wrap: balance;
+  }
+  .bajada { color: var(--suave); margin: 0 0 24px; max-width: 40em; }
+  .pasos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .paso, .caja {
+    background: var(--tarjeta);
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+    padding: 20px;
+    min-width: 0;
+  }
+  .paso b { display: block; font-family: var(--display); margin-bottom: 6px; }
+  .paso .num {
+    display: inline-grid; place-items: center;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--azul); color: #fff; font-weight: 700; font-size: .9rem;
+    margin-bottom: 10px;
+  }
+  .paso p { margin: 0; color: var(--suave); }
+
+  .niveles { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+  .nivel {
+    padding: 6px 14px; border-radius: 999px; font-weight: 700; font-size: .9rem; color: #fff;
+  }
+  .nivel.bajo { background: var(--verde); }
+  .nivel.moderado { background: var(--naranja); }
+  .nivel.alto { background: var(--rojo); }
+
+  .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .caja h3 { font-family: var(--display); margin: 0 0 8px; font-size: 1.1rem; }
+  .caja ol, .caja ul { margin: 0; padding-left: 20px; color: var(--suave); }
+  .caja li + li { margin-top: 4px; }
+
+  .aviso {
+    background: color-mix(in srgb, var(--ambar) 18%, var(--tarjeta));
+    border: 1px solid color-mix(in srgb, var(--ambar) 55%, var(--borde));
+    border-radius: 16px;
+    padding: 18px 20px;
+  }
+  .aviso .titulo { display: block; margin-bottom: 4px; }
+
+  footer {
+    margin-top: 56px;
+    border-top: 1px solid var(--borde);
+    padding-block: 24px calc(28px + env(safe-area-inset-bottom, 0px));
+    color: var(--suave);
+    font-size: .88rem;
+  }
+  footer p { margin: 4px 0; }
+
+  @media (max-width: 720px) {
+    .portada .envoltura { grid-template-columns: 1fr; justify-items: start; }
+    .portada img { width: 96px; height: 96px; border-radius: 22px; }
+    .pasos, .dos { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) { .boton { transition: none; } }
+</style>
 </head>
 <body>
-  <p>Abriendo <a href="app/">Radar Urbano</a>...</p>
+
+<header class="portada">
+  <div class="envoltura">
+    <img src="img/icono-256.png" alt="Logo de Radar Urbano" width="132" height="132">
+    <div>
+      <h1>Radar Urbano</h1>
+      <p>Conoce el nivel de riesgo de un lugar de Guayaquil antes de salir de casa, con datos oficiales del Ministerio del Interior.</p>
+      <div class="acciones">
+        <a class="boton principal" href="app/">Abrir Radar Urbano</a>
+        <a class="boton secundario" href="#instalar">Cómo instalarla</a>
+      </div>
+      <p class="datos-vivos" id="datos-vivos">Datos oficiales actualizados cada mes.</p>
+    </div>
+  </div>
+</header>
+
+<main class="envoltura">
+
+  <section aria-labelledby="como">
+    <h2 id="como">Cómo funciona</h2>
+    <p class="bajada">Tres pasos, sin registrarte y sin compartir tu ubicación.</p>
+    <div class="pasos">
+      <div class="paso">
+        <span class="num">1</span>
+        <b>Escribe un lugar</b>
+        <p>Un barrio, una ciudadela, un comercio o una calle de Guayaquil.</p>
+      </div>
+      <div class="paso">
+        <span class="num">2</span>
+        <b>Radar Urbano lo ubica</b>
+        <p>Encuentra el punto en el mapa y el subcircuito policial al que pertenece.</p>
+      </div>
+      <div class="paso">
+        <span class="num">3</span>
+        <b>Compara con la ciudad</b>
+        <p>Cuenta los casos oficiales a 1 km en los últimos 3 meses y los compara con el resto de Guayaquil.</p>
+      </div>
+    </div>
+    <div class="niveles" aria-label="Niveles de riesgo">
+      <span class="nivel bajo">Riesgo bajo</span>
+      <span class="nivel moderado">Riesgo moderado</span>
+      <span class="nivel alto">Riesgo alto</span>
+    </div>
+  </section>
+
+  <section aria-labelledby="instalar">
+    <h2 id="instalar">Cómo instalarla</h2>
+    <p class="bajada">Funciona en cualquier teléfono o computadora con internet.</p>
+    <div class="dos">
+      <div class="caja">
+        <h3>iPhone</h3>
+        <ol>
+          <li>Abre <a href="app/">Radar Urbano</a> en <strong>Safari</strong>.</li>
+          <li>Toca <strong>Compartir</strong> (el cuadrado con la flecha hacia arriba).</li>
+          <li>Elige <strong>Agregar a pantalla de inicio</strong>.</li>
+        </ol>
+      </div>
+      <div class="caja">
+        <h3>Android</h3>
+        <ol>
+          <li>Abre <a href="app/">Radar Urbano</a> en <strong>Chrome</strong>.</li>
+          <li>Toca el menú <strong>⋮</strong> y elige <strong>Agregar a la pantalla principal</strong>.</li>
+          <li>La app para Android estará pronto en Google Play.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="fuente">
+    <h2 id="fuente">De dónde salen los datos</h2>
+    <p class="bajada">Radar Urbano usa los datos abiertos de homicidios intencionales que publica cada mes el Ministerio del Interior del Ecuador. La app los descarga y procesa de forma automática, sin intervención manual.</p>
+    <div class="aviso" role="note">
+      <strong class="titulo">Radar Urbano es informativo.</strong>
+      Muestra estadísticas oficiales con el retraso propio de su publicación, no información en tiempo real. Un riesgo bajo no garantiza que un lugar sea seguro. En una emergencia llama al <strong>ECU 911</strong>.
+    </div>
+  </section>
+
+  <section aria-labelledby="opina">
+    <h2 id="opina">Ayúdanos a mejorar</h2>
+    <p class="bajada">Radar Urbano está en etapa de prueba. Cuéntanos qué lugar no encontraste o qué le cambiarías, en una encuesta anónima de un minuto.</p>
+    <a class="boton principal" style="background: var(--azul); color: #fff;" href="https://forms.gle/kzkcryGGR4VGAt5v6" target="_blank" rel="noopener">Responder la encuesta</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="envoltura">
+    <p><strong>Radar Urbano</strong> · Guayaquil, Ecuador · © 2026</p>
+    <p>Datos: Ministerio del Interior del Ecuador (datosabiertos.gob.ec) · Mapas: © colaboradores de OpenStreetMap</p>
+  </div>
+</footer>
+
+<script>
+  // Muestra el período de los datos publicados por el robot (si no carga, queda el texto por defecto).
+  (function () {
+    var meses = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+    function legible(m) {
+      var p = String(m || '').split('-');
+      var n = parseInt(p[1], 10);
+      return (n >= 1 && n <= 12) ? meses[n - 1] + ' ' + p[0] : m;
+    }
+    fetch('datos/homicidios_guayaquil.json', { cache: 'no-cache' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d || !d.ultimo_mes) return;
+        document.getElementById('datos-vivos').textContent =
+          'Datos oficiales hasta ' + legible(d.ultimo_mes) + ' · ' +
+          Number(d.total_casos).toLocaleString('es-EC') + ' casos registrados en Guayaquil desde ' +
+          legible(d.primer_mes) + '.';
+      })
+      .catch(function () {});
+  })();
+</script>
 </body>
 </html>
