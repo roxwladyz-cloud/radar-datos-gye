@@ -1,0 +1,1444 @@
+{
+"nota": "Lugares para sugerencias de Radar Urbano. Coordenadas: OpenStreetMap (ODbL).",
+"lugares": [
+{
+"n": "Centro de Guayaquil",
+"a": [
+"centro",
+"centro de la ciudad"
+],
+"c": "GUAYAQUIL",
+"_q": "Parque Seminario",
+"lat": -2.19467,
+"lon": -79.88318,
+"origen": "osm",
+"osm": "Parque Seminario, Centro, Rocafuerte, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Malecón 2000",
+"a": [
+"malecon",
+"malecon simon bolivar"
+],
+"c": "GUAYAQUIL",
+"_q": "Malecón 2000",
+"lat": -2.18736,
+"lon": -79.90086,
+"origen": "osm",
+"osm": "Malecón Eloy Alfaro, Ciudadela Ferroviaria, Hipermercados El Coral, Bellavista, Tarqui, Guayaquil, Guayas, 090615, Ecuador"
+},
+{
+"n": "La Bahía",
+"a": [
+"bahia",
+"la bahia de guayaquil"
+],
+"c": "GUAYAQUIL",
+"_q": "La Bahía",
+"lat": -2.20052,
+"lon": -79.88283,
+"origen": "osm",
+"osm": "La Bahia, José Joaquín de Olmedo, Olmedo-San Alejo, Guayaquil, Guayas, 090512, Ecuador"
+},
+{
+"n": "Barrio Orellana",
+"a": [
+"orellana"
+],
+"c": "GUAYAQUIL",
+"_q": "Barrio Orellana",
+"lat": -2.18642,
+"lon": -79.89251,
+"origen": "osm",
+"osm": "Barrio Orellana, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Barrio Garay",
+"a": [
+"garay"
+],
+"c": "GUAYAQUIL",
+"_q": "Garay",
+"lat": -2.19032,
+"lon": -79.89743,
+"origen": "osm",
+"osm": "Barrio Garay, Urdaneta, Parroquia Urdaneta, Guayaquil, Guayas, 090303, Ecuador"
+},
+{
+"n": "Barrio Centenario",
+"a": [
+"centenario"
+],
+"c": "GUAYAQUIL",
+"_q": "Centenario",
+"lat": -2.18987,
+"lon": -79.88764,
+"origen": "osm",
+"osm": "Parque Centenario, Centro, Rocafuerte, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Barrio Cuba",
+"a": [
+"cuba"
+],
+"c": "GUAYAQUIL",
+"_q": "Barrio Cuba",
+"lat": -2.2283,
+"lon": -79.88815,
+"origen": "osm",
+"osm": "Barrio Cuba, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Cristo del Consuelo",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Cristo del Consuelo",
+"lat": -2.2196,
+"lon": -79.90351,
+"origen": "osm",
+"osm": "Cristo del Consuelo, García Moreno, Parroquia García Moreno, Guayaquil, Guayas, 090304, Ecuador"
+},
+{
+"n": "Urdesa",
+"a": [
+"urdesa central"
+],
+"c": "GUAYAQUIL",
+"_q": "Urdesa",
+"lat": -2.16261,
+"lon": -79.91018,
+"origen": "osm",
+"osm": "Urdesa, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Urdesa Norte",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Urdesa Norte",
+"lat": -2.15855,
+"lon": -79.90546,
+"origen": "osm",
+"osm": "Urdesa Norte, Tarqui, Guayaquil, Guayas, 090507, Ecuador"
+},
+{
+"n": "Lomas de Urdesa",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Lomas de Urdesa",
+"lat": -2.16365,
+"lon": -79.9075,
+"origen": "osm",
+"osm": "Lomas de Urdesa, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Miraflores",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Miraflores",
+"lat": -2.16538,
+"lon": -79.91954,
+"origen": "osm",
+"osm": "Miraflores, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Kennedy",
+"a": [
+"ciudadela kennedy",
+"kennedy vieja"
+],
+"c": "GUAYAQUIL",
+"_q": "Kennedy",
+"lat": -2.16677,
+"lon": -79.89662,
+"origen": "osm",
+"osm": "Kennedy, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Kennedy Norte",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Kennedy Norte",
+"lat": -2.16115,
+"lon": -79.90006,
+"origen": "osm",
+"osm": "Kennedy Norte, Tarqui, Guayaquil, Guayas, 090506, Ecuador"
+},
+{
+"n": "Nueva Kennedy",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Nueva Kennedy",
+"lat": -2.17792,
+"lon": -79.89742,
+"origen": "osm",
+"osm": "Fundación Ecuador, 100, Avenida San Jorge, Kennedy, Tarqui, Guayaquil, Guayas, 090112, Ecuador"
+},
+{
+"n": "Los Ceibos",
+"a": [
+"ceibos"
+],
+"c": "GUAYAQUIL",
+"_q": "Los Ceibos",
+"lat": -2.16604,
+"lon": -79.93828,
+"origen": "osm",
+"osm": "Los Ceibos, Tarqui, Guayaquil, Guayas, 090604, Ecuador"
+},
+{
+"n": "Ceibos Norte",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Ceibos Norte",
+"lat": -2.15119,
+"lon": -79.9436,
+"origen": "osm",
+"osm": "Ceibos Norte, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Bellavista",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Bellavista",
+"lat": -2.17865,
+"lon": -79.91337,
+"origen": "osm",
+"osm": "Bellavista, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Mapasingue",
+"a": [
+"mapasingue este",
+"mapasingue oeste"
+],
+"c": "GUAYAQUIL",
+"_q": "Mapasingue",
+"lat": -2.1536,
+"lon": -79.92394,
+"origen": "osm",
+"osm": "Mapasingue, Tarqui, Guayaquil, Guayas, 090905, Ecuador"
+},
+{
+"n": "Prosperina",
+"a": [
+"la prosperina"
+],
+"c": "GUAYAQUIL",
+"_q": "Prosperina",
+"lat": -2.13914,
+"lon": -79.93954,
+"origen": "osm",
+"osm": "Prosperina, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Nueva Prosperina",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Nueva Prosperina",
+"lat": -2.12409,
+"lon": -79.97441,
+"origen": "osm",
+"osm": "nueva prosperina, Coop. San Ignacio Loyola, CECAL Padre Pedro Arrupe S.J. de Fe y Alegría - Ecuador, Cooperativa Nueva Prosperina L-5, Guayaquil, Guayas, 090804"
+},
+{
+"n": "Atarazana",
+"a": [
+"la atarazana"
+],
+"c": "GUAYAQUIL",
+"_q": "Atarazana",
+"lat": -2.17585,
+"lon": -79.8841,
+"origen": "osm",
+"osm": "Atarazana, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "La Garzota",
+"a": [
+"garzota"
+],
+"c": "GUAYAQUIL",
+"_q": "La Garzota",
+"lat": -2.14621,
+"lon": -79.89784,
+"origen": "osm",
+"osm": "Auto Decorativo La Garzota, Agustín Freire Ycaza, Garzota 1, Garzota I, Tarqui, Guayaquil, Guayas, 090505, Ecuador"
+},
+{
+"n": "Sauces 1",
+"a": [
+"sauces i",
+"sauces uno"
+],
+"c": "GUAYAQUIL",
+"_q": "Sauces 1",
+"lat": -2.1406,
+"lon": -79.89207,
+"origen": "osm",
+"osm": "Sauces 1, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Sauces 2",
+"a": [
+"sauces dos",
+"sauces ii"
+],
+"c": "GUAYAQUIL",
+"_q": "Sauces 2",
+"lat": -2.13814,
+"lon": -79.88842,
+"origen": "osm",
+"osm": "Sauces 2, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Sauces 3",
+"a": [
+"sauces iii",
+"sauces tres"
+],
+"c": "GUAYAQUIL",
+"_q": "Sauces 3",
+"lat": -2.12825,
+"lon": -79.88941,
+"origen": "osm",
+"osm": "Sauces 3, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Sauces 4",
+"a": [
+"sauces cuatro",
+"sauces iv"
+],
+"c": "GUAYAQUIL",
+"_q": "Sauces 4",
+"lat": -2.12437,
+"lon": -79.88674,
+"origen": "osm",
+"osm": "Sauces 4, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Sauces 5",
+"a": [
+"sauces cinco",
+"sauces v"
+],
+"c": "GUAYAQUIL",
+"_q": "Sauces 5",
+"lat": -2.1225,
+"lon": -79.89191,
+"origen": "osm",
+"osm": "Sauces 5, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Sauces 6",
+"a": [
+"sauces seis",
+"sauces vi"
+],
+"c": "GUAYAQUIL",
+"_q": "Sauces 6",
+"lat": -2.12516,
+"lon": -79.89713,
+"origen": "osm",
+"osm": "Sauces 6, Tarqui, Guayaquil, Guayas, 090502, Ecuador"
+},
+{
+"n": "Sauces 7",
+"a": [
+"sauces siete",
+"sauces vii"
+],
+"c": "GUAYAQUIL",
+"_q": "Sauces 7",
+"lat": -2.13532,
+"lon": -79.89034,
+"origen": "osm",
+"osm": "Sauces 7, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Sauces 8",
+"a": [
+"sauces ocho",
+"sauces viii"
+],
+"c": "GUAYAQUIL",
+"_q": "Sauces 8",
+"lat": -2.12913,
+"lon": -79.90348,
+"origen": "osm",
+"osm": "Sauces 8, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Sauces 9",
+"a": [
+"sauces ix",
+"sauces nueve"
+],
+"c": "GUAYAQUIL",
+"_q": "Sauces 9",
+"lat": -2.1315,
+"lon": -79.89278,
+"origen": "osm",
+"osm": "Sauces 9, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Alborada",
+"a": [
+"la alborada"
+],
+"c": "GUAYAQUIL",
+"_q": "Alborada",
+"lat": -2.13641,
+"lon": -79.89743,
+"origen": "osm",
+"osm": "Alborada, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Colinas de la Alborada",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Colinas de la Alborada",
+"lat": -2.12667,
+"lon": -79.9117,
+"origen": "osm",
+"osm": "Colinas de la Alborada, Colinas de Alborada, Tarqui, Guayaquil, Guayas, 090607, Ecuador"
+},
+{
+"n": "Guayacanes",
+"a": [
+"los guayacanes"
+],
+"c": "GUAYAQUIL",
+"_q": "Guayacanes",
+"lat": -2.11847,
+"lon": -79.89149,
+"origen": "osm",
+"osm": "Guayacanes, Tarqui, Guayaquil, Guayas, 090509, Ecuador"
+},
+{
+"n": "Samanes",
+"a": [
+"los samanes"
+],
+"c": "GUAYAQUIL",
+"_q": "Samanes",
+"lat": -2.11394,
+"lon": -79.90107,
+"origen": "osm",
+"osm": "Samanes, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Huancavilca Norte",
+"a": [
+"huancavilca"
+],
+"c": "GUAYAQUIL",
+"_q": "Huancavilca Norte",
+"lat": -2.09889,
+"lon": -79.90723,
+"origen": "osm",
+"osm": "Cdla. Huancavilca Norte, Cdla. Estrella del Mar, Quinto Guayas Este, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Vergeles",
+"a": [
+"los vergeles"
+],
+"c": "GUAYAQUIL",
+"_q": "Vergeles",
+"lat": -2.09247,
+"lon": -79.90439,
+"origen": "osm",
+"osm": "vergeles, Cdla. Estrella del Mar, Los Vergeles, Tarqui, Guayaquil, Guayas, 090706, Ecuador"
+},
+{
+"n": "Mucho Lote 1",
+"a": [
+"mucho lote",
+"mucho lote uno"
+],
+"c": "GUAYAQUIL",
+"_q": "Mucho Lote 1",
+"lat": -2.09035,
+"lon": -79.92312,
+"origen": "osm",
+"osm": "Mucho lote 1, villa 9, 4° Paseo 24B NO, Mucho Lote 1 - Etapa 7, Mucho Lote I - Etapa 4, Bastión Popular, Tarqui, Guayaquil, Guayas, 090704, Ecuador"
+},
+{
+"n": "Mucho Lote 2",
+"a": [
+"mucho lote dos"
+],
+"c": "GUAYAQUIL",
+"_q": "Mucho Lote 2",
+"lat": -2.06589,
+"lon": -79.89677,
+"origen": "osm",
+"osm": "Mucho Lote 2, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Las Orquídeas",
+"a": [
+"orquideas"
+],
+"c": "GUAYAQUIL",
+"_q": "Las Orquídeas",
+"lat": -2.07909,
+"lon": -79.9054,
+"origen": "osm",
+"osm": "Las Orquideas, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Urdenor",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Urdenor",
+"lat": -2.14599,
+"lon": -79.90354,
+"origen": "osm",
+"osm": "Urdenor 1, Tarqui, Guayaquil, Guayas, 090505, Ecuador"
+},
+{
+"n": "La Florida",
+"a": [
+"florida norte"
+],
+"c": "GUAYAQUIL",
+"_q": "La Florida",
+"lat": -2.59999,
+"lon": -80.36656,
+"origen": "osm",
+"osm": "La Florida, Morro, Guayaquil, Guayas, 092201, Ecuador"
+},
+{
+"n": "Pascuales",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Pascuales",
+"lat": -2.06952,
+"lon": -79.934,
+"origen": "osm",
+"osm": "Pascuales, Parroquia Pascuales, Guayaquil, Guayas, 090702, Ecuador"
+},
+{
+"n": "Bastión Popular",
+"a": [
+"bastion"
+],
+"c": "GUAYAQUIL",
+"_q": "Bastión Popular",
+"lat": -2.09333,
+"lon": -79.92569,
+"origen": "osm",
+"osm": "Bastión Popular, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Flor de Bastión",
+"a": [
+"flor de bastion"
+],
+"c": "GUAYAQUIL",
+"_q": "Flor de Bastión",
+"lat": -2.09532,
+"lon": -79.95506,
+"origen": "osm",
+"osm": "flor de Bastión, Urb. Caracol, Urbanización Cumbres del Sol, Guayaquil, Guayas, 090802, Ecuador"
+},
+{
+"n": "Monte Sinaí",
+"a": [
+"monte sinai"
+],
+"c": "GUAYAQUIL",
+"_q": "Monte Sinaí",
+"lat": -2.12527,
+"lon": -79.99618,
+"origen": "osm",
+"osm": "Monte Sinaí, Guayaquil, Guayas, 090809, Ecuador"
+},
+{
+"n": "Socio Vivienda",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Socio Vivienda",
+"lat": -2.15124,
+"lon": -79.95424,
+"origen": "osm",
+"osm": "Centro de Investigaciones Biotecnológicas del Ecuador, Ciclovía de ESPOL, Gallegos Lara, Condominio Vizcaya Gardens, Guayaquil, Guayas, 090150, Ecuador"
+},
+{
+"n": "Paraíso de la Flor",
+"a": [
+"paraiso de la flor"
+],
+"c": "GUAYAQUIL",
+"_q": "Paraíso de la Flor",
+"lat": -2.10102,
+"lon": -79.95527,
+"origen": "osm",
+"osm": "paraíso de la flor, Centro Comercial - Mall El Fortín, Cooperativa Bella Visión, Guayaquil, Guayas, 090802, Ecuador"
+},
+{
+"n": "Martha de Roldós",
+"a": [
+"martha de roldos"
+],
+"c": "GUAYAQUIL",
+"_q": "Martha de Roldós",
+"lat": -2.14677,
+"lon": -79.92116,
+"origen": "osm",
+"osm": "Martha de Roldós, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Juan Montalvo",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Juan Montalvo",
+"lat": -2.12697,
+"lon": -79.91782,
+"origen": "osm",
+"osm": "Juan Montalvo, Tarqui, Guayaquil, Guayas, 090602, Ecuador"
+},
+{
+"n": "El Fortín",
+"a": [
+"fortin"
+],
+"c": "GUAYAQUIL",
+"_q": "El Fortín",
+"lat": -2.11457,
+"lon": -79.95282,
+"origen": "osm",
+"osm": "Cooperativa El Fortín, Guayaquil, Guayas, 090803, Ecuador"
+},
+{
+"n": "Sergio Toral",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Sergio Toral",
+"lat": -2.12805,
+"lon": -79.97794,
+"origen": "osm",
+"osm": "Sergio Toral, Coop. Reynaldo Quiñonez, CECAL Padre Pedro Arrupe S.J. de Fe y Alegría - Ecuador, Cooperativa Reynaldo Quiñonez, Guayaquil, Guayas, 090804, Ecuado"
+},
+{
+"n": "Puerto Azul",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Puerto Azul",
+"lat": -2.19063,
+"lon": -79.96757,
+"origen": "osm",
+"osm": "Urbano Puerto Azul, Puerto Azul Sur, Guayaquil, Guayas, 090902, Ecuador"
+},
+{
+"n": "Bosques de la Costa",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Bosques de la Costa",
+"lat": -2.18513,
+"lon": -79.97032,
+"origen": "osm",
+"osm": "Bosques Main Avenue, Urb. Bosques de la Costa, Puerto Azul Norte, Guayaquil, Guayas, 090902, Ecuador"
+},
+{
+"n": "Chongón",
+"a": [
+"chongon"
+],
+"c": "GUAYAQUIL",
+"_q": "Chongón",
+"lat": -2.23624,
+"lon": -80.07722,
+"origen": "osm",
+"osm": "Chongón, Guayaquil, Guayas, 090901, Ecuador"
+},
+{
+"n": "Puerto Hondo",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Puerto Hondo",
+"lat": -2.19081,
+"lon": -80.02477,
+"origen": "osm",
+"osm": "Puerto Hondo, Guayaquil, Guayas, 090901, Ecuador"
+},
+{
+"n": "Portete",
+"a": [
+"portete de tarqui"
+],
+"c": "GUAYAQUIL",
+"_q": "Portete",
+"lat": -2.20023,
+"lon": -79.92196,
+"origen": "osm",
+"osm": "Portete, Avenida Portete de Tarqui, Febres Cordero, Parroquia Febres Cordero, Guayaquil, Guayas, 090415, Ecuador"
+},
+{
+"n": "Suburbio",
+"a": [
+"suburbio oeste"
+],
+"c": "GUAYAQUIL",
+"_q": "Suburbio",
+"lat": -2.22268,
+"lon": -79.9371,
+"origen": "osm",
+"osm": "Batallón del Suburbio, Parroquia Febres Cordero, Guayaquil, Guayas, 090405, Ecuador"
+},
+{
+"n": "Batallón del Suburbio",
+"a": [
+"batallon del suburbio"
+],
+"c": "GUAYAQUIL",
+"_q": "Batallón del Suburbio",
+"lat": -2.22268,
+"lon": -79.9371,
+"origen": "osm",
+"osm": "Batallón del Suburbio, Parroquia Febres Cordero, Guayaquil, Guayas, 090405, Ecuador"
+},
+{
+"n": "El Cisne",
+"a": [
+"cisne",
+"cisne 2"
+],
+"c": "GUAYAQUIL",
+"_q": "El Cisne",
+"lat": -2.18966,
+"lon": -79.88474,
+"origen": "osm",
+"osm": "El Cisne, Victor Manuel Rendón, Barrio de la Merced, Roca, Guayaquil, Guayas, 090312, Ecuador"
+},
+{
+"n": "Puerto Lisa",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Puerto Lisa",
+"lat": -2.21591,
+"lon": -79.92281,
+"origen": "osm",
+"osm": "Puerto Lisa, Parroquia Febres Cordero, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Las Malvinas",
+"a": [
+"malvinas"
+],
+"c": "GUAYAQUIL",
+"_q": "Las Malvinas",
+"lat": -2.23534,
+"lon": -79.90708,
+"origen": "osm",
+"osm": "LAS MALVINAS, Barrio del Maestro, Luz del Guayas, Guayaquil, Guayas, 090203, Ecuador"
+},
+{
+"n": "Isla Trinitaria",
+"a": [
+"la trini",
+"trinipuerto",
+"trinitaria"
+],
+"c": "GUAYAQUIL",
+"_q": "Isla Trinitaria",
+"lat": -2.25181,
+"lon": -79.92045,
+"origen": "osm",
+"osm": "Isla Trinitaria, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Cooperativa Nigeria",
+"a": [
+"nigeria"
+],
+"c": "GUAYAQUIL",
+"_q": "Nigeria",
+"lat": -2.22901,
+"lon": -79.91976,
+"origen": "osm",
+"osm": "Isla Trinitaria - Nigeria, Mogollón, Isla Trinitaria, Guayaquil, Guayas, 090407, Ecuador"
+},
+{
+"n": "Guasmo Norte",
+"a": [
+"guasmo"
+],
+"c": "GUAYAQUIL",
+"_q": "Guasmo Norte",
+"lat": -2.24437,
+"lon": -79.88518,
+"origen": "osm",
+"osm": "Parque del Niño Guasmo Norte, Muelle - Astillero Maridueña, Río Guayas, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Guasmo Central",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Guasmo Central",
+"lat": -2.25038,
+"lon": -79.89012,
+"origen": "osm",
+"osm": "guasmo central, Avenida Monseñor Domingo Comin, Pradera 2, Floresta, Guayaquil, Guayas, 090107, Ecuador"
+},
+{
+"n": "Guasmo Sur",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Guasmo Sur",
+"lat": -2.25265,
+"lon": -79.87553,
+"origen": "osm",
+"osm": "Mass Line - Motorcycle Assembly Line Of Ecuador, Muelle - Astillero Maridueña, Río Guayas, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Unión de Bananeros",
+"a": [
+"union de bananeros"
+],
+"c": "GUAYAQUIL",
+"_q": "Unión de Bananeros",
+"lat": -2.27407,
+"lon": -79.87956,
+"origen": "osm",
+"osm": "Unión de Bananeros 5, Guasmo Este, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Fertisa",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Fertisa",
+"lat": -2.25383,
+"lon": -79.90438,
+"origen": "osm",
+"osm": "Fertisa, Terminal Portuaria Fertisa, Guasmo Oeste, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "La Pradera",
+"a": [
+"pradera"
+],
+"c": "GUAYAQUIL",
+"_q": "La Pradera",
+"lat": -2.20263,
+"lon": -79.91401,
+"origen": "osm",
+"osm": "LA PRADERA, Barrio Puerto Lisa, Febres Cordero, Parroquia Febres Cordero, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "La Floresta",
+"a": [
+"floresta",
+"floresta 1",
+"floresta 2"
+],
+"c": "GUAYAQUIL",
+"_q": "La Floresta",
+"lat": -2.25042,
+"lon": -79.8836,
+"origen": "osm",
+"osm": "Parque Municipal - Floresta 2 - La Madre, Muelle - Astillero Maridueña, Río Guayas, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Los Esteros",
+"a": [
+"esteros"
+],
+"c": "GUAYAQUIL",
+"_q": "Los Esteros",
+"lat": -2.24387,
+"lon": -79.90777,
+"origen": "osm",
+"osm": "Los Esteros, Guayaquil, Guayas, 090204, Ecuador"
+},
+{
+"n": "Las Acacias",
+"a": [
+"acacias"
+],
+"c": "GUAYAQUIL",
+"_q": "Las Acacias",
+"lat": -2.22257,
+"lon": -79.89242,
+"origen": "osm",
+"osm": "Las Acacias, Las Américas, Guayaquil, Guayas, 090109, Ecuador"
+},
+{
+"n": "Los Almendros",
+"a": [
+"almendros"
+],
+"c": "GUAYAQUIL",
+"_q": "Los Almendros",
+"lat": -2.17008,
+"lon": -79.92278,
+"origen": "osm",
+"osm": "Los Almendros, Ciudadela El Paraíso, Paraíso, Tarqui, Guayaquil, Guayas, 090613, Ecuador"
+},
+{
+"n": "Valdivia",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Valdivia",
+"lat": -2.24467,
+"lon": -79.89364,
+"origen": "osm",
+"osm": "Cdla. Valdivia, Monte Bello, Guayaquil, Guayas, 090204, Ecuador"
+},
+{
+"n": "Coviem",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Coviem",
+"lat": -2.23746,
+"lon": -79.9029,
+"origen": "osm",
+"osm": "Ciudadela Coviem, Barrio del Maestro, Luz del Guayas, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Ciudadela 9 de Octubre",
+"a": [
+"9 de octubre",
+"nueve de octubre"
+],
+"c": "GUAYAQUIL",
+"_q": "Ciudadela 9 de Octubre",
+"lat": -2.23394,
+"lon": -79.89375,
+"origen": "osm",
+"osm": "Ciudadela 9 de Octubre, Pradera 1, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Terminal Terrestre de Guayaquil",
+"a": [
+"terminal",
+"terminal terrestre"
+],
+"c": "GUAYAQUIL",
+"_q": "Terminal Terrestre Jaime Roldós Aguilera",
+"lat": -2.14303,
+"lon": -79.8792,
+"origen": "osm",
+"osm": "Terminal Terrestre Jaime Roldós Aguilera, Avenida Benjamín Rosales, Terminal Terrestre Municipal - Dr. Jaime Roldós Aguilera, Limonal del Rio, Tarqui, Guayaquil"
+},
+{
+"n": "Aeropuerto José Joaquín de Olmedo",
+"a": [
+"aeropuerto"
+],
+"c": "GUAYAQUIL",
+"_q": "Aeropuerto José Joaquín de Olmedo",
+"lat": -2.15793,
+"lon": -79.8833,
+"origen": "osm",
+"osm": "Aeropuerto Internacional José Joaquín de Olmedo, Avenida Carlos Luis Plaza Dañin, Centro Comercial - Plaza Soho, Tarqui, Guayaquil, Guayas, 090514, Ecuador"
+},
+{
+"n": "Mall del Sol",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Mall del Sol",
+"lat": -2.15504,
+"lon": -79.89269,
+"origen": "osm",
+"osm": "Mall del Sol, Centro Comercial - Mall del Sol, Ciudadela Vernaza Norte, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "San Marino Shopping",
+"a": [
+"san marino"
+],
+"c": "GUAYAQUIL",
+"_q": "San Marino Shopping",
+"lat": -2.16914,
+"lon": -79.89827,
+"origen": "osm",
+"osm": "Almacenes Montero (San Marino Shopping), Francisco de Orellana, Cdla. Las Orquídeas, Mucho Lote I - Etapa 6, Tarqui, Guayaquil, Guayas, 090706, Ecuador"
+},
+{
+"n": "Policentro",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Policentro",
+"lat": -2.17088,
+"lon": -79.90021,
+"origen": "osm",
+"osm": "Policentro, General Francisco Boloña, Kennedy, Tarqui, Guayaquil, Guayas, 090909, Ecuador"
+},
+{
+"n": "City Mall",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "City Mall",
+"lat": -2.14091,
+"lon": -79.90944,
+"origen": "osm",
+"osm": "Centro Comercial City Mall, Lomas de Prosperina, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Mall del Sur",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Mall del Sur",
+"lat": -2.22723,
+"lon": -79.89796,
+"origen": "osm",
+"osm": "Mall del Sur, Avenida 25 de Julio, Saiba, La Saiba, Guayaquil, Guayas, 090109, Ecuador"
+},
+{
+"n": "Mall El Fortín",
+"a": [
+"mall del fortin"
+],
+"c": "GUAYAQUIL",
+"_q": "Mall El Fortín",
+"lat": -2.10944,
+"lon": -79.94885,
+"origen": "osm",
+"osm": "Centro Comercial - Mall El Fortín, calle el mall, Centro Comercial - Mall El Fortín, Cooperativa Fortín Bl 1, Guayaquil, Guayas, 090803, Ecuador"
+},
+{
+"n": "Riocentro Ceibos",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Riocentro Ceibos",
+"lat": -2.1781,
+"lon": -79.94231,
+"origen": "osm",
+"osm": "CC. Riocentro Los Ceibos 2, Hospital General - IESS Los Ceibos, San Eduardo, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Riocentro Sur",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Riocentro Sur",
+"lat": -2.24163,
+"lon": -79.89418,
+"origen": "osm",
+"osm": "Riocentro Sur, Cdla. Valdivia, Monte Bello, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Riocentro Norte",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Riocentro Norte",
+"lat": -2.12764,
+"lon": -79.90695,
+"origen": "osm",
+"osm": "Centro Comercial - Riocentro Norte, El Condor, Tarqui, Guayaquil, Guayas, 090607, Ecuador"
+},
+{
+"n": "Estadio Monumental",
+"a": [
+"estadio de barcelona",
+"monumental"
+],
+"c": "GUAYAQUIL",
+"_q": "Estadio Monumental",
+"lat": -2.18582,
+"lon": -79.92497,
+"origen": "osm",
+"osm": "Estadio Monumental Banco Pichincha, Avenida Barcelona, Mirador \"Cerro Paraíso\", Bellavista, Tarqui, Guayaquil, Guayas, 090603, Ecuador"
+},
+{
+"n": "Estadio George Capwell",
+"a": [
+"capwell",
+"estadio de emelec"
+],
+"c": "GUAYAQUIL",
+"_q": "Estadio George Capwell",
+"lat": -2.20663,
+"lon": -79.89379,
+"origen": "osm",
+"osm": "Estadio George Capwell, Pedro Moncayo, Ayacucho, Parroquia Ayacucho, Guayaquil, Guayas, 090308, Ecuador"
+},
+{
+"n": "Parque Samanes",
+"a": [
+"parque los samanes"
+],
+"c": "GUAYAQUIL",
+"_q": "Parque Samanes",
+"lat": -2.10743,
+"lon": -79.91671,
+"origen": "osm",
+"osm": "Parque de los Samanes, Quinto Guayas Oeste, Tarqui, Guayaquil, Guayas, Ecuador"
+},
+{
+"n": "Universidad de Guayaquil",
+"a": [],
+"c": "GUAYAQUIL",
+"_q": "Universidad de Guayaquil",
+"lat": -2.1815,
+"lon": -79.89864,
+"origen": "osm",
+"osm": "Universidad de Guayaquil, Avenida del Periodista, Kennedy, Tarqui, Guayaquil, Guayas, 090514, Ecuador"
+},
+{
+"n": "ESPOL",
+"a": [
+"espol prosperina",
+"politecnica"
+],
+"c": "GUAYAQUIL",
+"_q": "Escuela Superior Politécnica del Litoral",
+"lat": -2.14771,
+"lon": -79.96473,
+"origen": "osm",
+"osm": "ESCUELA SUPERIOR POLITECNICA DEL LITORAL, Perimetro del Campus Espol, Condominio Vizcaya Gardens, Guayaquil, Guayas, 090150, Ecuador"
+},
+{
+"n": "Universidad Católica de Santiago de Guayaquil",
+"a": [
+"catolica",
+"ucsg"
+],
+"c": "GUAYAQUIL",
+"_q": "Universidad Católica de Santiago de Guayaquil",
+"lat": -2.18177,
+"lon": -79.90528,
+"origen": "osm",
+"osm": "Universidad Católica de Santiago de Guayaquil, 5º Pasaje 15A SO, Ciudadela Bellavista, Bellavista, Tarqui, Guayaquil, Guayas, 090114, Ecuador"
+},
+{
+"n": "Hospital Luis Vernaza",
+"a": [
+"vernaza"
+],
+"c": "GUAYAQUIL",
+"_q": "Hospital Luis Vernaza",
+"lat": -2.18253,
+"lon": -79.88136,
+"origen": "osm",
+"osm": "Hospital Luis Vernaza, Boyacá, Cerro Santa Ana, Tarqui, Guayaquil, Guayas, 090306, Ecuador"
+},
+{
+"n": "Hospital Abel Gilbert Pontón",
+"a": [
+"hospital del guasmo"
+],
+"c": "GUAYAQUIL",
+"_q": "Hospital Abel Gilbert Pontón",
+"lat": -2.21249,
+"lon": -79.93021,
+"origen": "osm",
+"osm": "Hospital de Especialidades Guayaquil \"Dr. Abel Gilbert Pontón\", Calle 29 y Oriente, Assad Bucaram Elmalín (la 29), Febres Cordero, Parroquia Febres Cordero, Gua"
+},
+{
+"n": "Durán Centro",
+"a": [
+"centro de duran",
+"duran"
+],
+"c": "DURAN",
+"_q": "Eloy Alfaro (Durán)",
+"lat": -2.18151,
+"lon": -79.80914,
+"origen": "osm",
+"osm": "UBE-Universidad Bolivariana del Ecuador, Durán, Duran, Durán, Guayas, 092405, Ecuador"
+},
+{
+"n": "El Recreo",
+"a": [
+"ciudadela el recreo",
+"recreo"
+],
+"c": "DURAN",
+"_q": "El Recreo",
+"lat": -2.16894,
+"lon": -79.80575,
+"origen": "osm",
+"osm": "El Recreo, Unidad de Vigilancia Comunitaria - UVC Recreo, Durán, Duran, Durán, Guayas, Ecuador"
+},
+{
+"n": "Abel Gilbert (Durán)",
+"a": [
+"abel gilbert"
+],
+"c": "DURAN",
+"_q": "Abel Gilbert",
+"lat": -2.18402,
+"lon": -79.85473,
+"origen": "osm",
+"osm": "Cdla. Abel Gilbert 3, Cementerio General - Durán, Santay, Duran, Durán, Guayas, 092409, Ecuador"
+},
+{
+"n": "Divino Niño",
+"a": [
+"divino nino"
+],
+"c": "DURAN",
+"_q": "Divino Niño",
+"lat": -2.16814,
+"lon": -79.81806,
+"origen": "osm",
+"osm": "Divino niño, Ciudadela Alfonso Oramas Gonzalez, Durán, Duran, Durán, Guayas, 092401, Ecuador"
+},
+{
+"n": "Primavera",
+"a": [
+"la primavera"
+],
+"c": "DURAN",
+"_q": "Primavera",
+"lat": -2.17759,
+"lon": -79.84421,
+"origen": "osm",
+"osm": "Cdla. Primavera II, Cementerio General - Durán, Durán, Duran, Durán, Guayas, 092409, Ecuador"
+},
+{
+"n": "Panorama",
+"a": [],
+"c": "DURAN",
+"_q": "Panorama",
+"lat": -2.1698,
+"lon": -79.82131,
+"origen": "osm",
+"osm": "Panorama, Ciudadela Alfonso Oramas Gonzalez, Cementerio General - Durán, Durán, Duran, Durán, Guayas, 092401, Ecuador"
+},
+{
+"n": "Peñón del Río",
+"a": [
+"penon del rio"
+],
+"c": "DURAN",
+"_q": "Peñón del Río",
+"lat": -2.1522,
+"lon": -79.82915,
+"origen": "osm",
+"osm": "Salón del Reino Testigos de Jehová Brisas del Estero Peñon del Río, Jaime Roldos Aguilera, Complejo Deportivo - Max Cortez, Cementerio General - Durán, Durán, D"
+},
+{
+"n": "Cerro Las Cabras",
+"a": [
+"las cabras"
+],
+"c": "DURAN",
+"_q": "Cerro Las Cabras",
+"lat": -2.17189,
+"lon": -79.81828,
+"origen": "osm",
+"osm": "Cerro de las cabras, UBE-Universidad Bolivariana del Ecuador, Durán, Duran, Durán, Guayas, 092405, Ecuador"
+},
+{
+"n": "Héctor Cobos",
+"a": [
+"hector cobos"
+],
+"c": "DURAN",
+"_q": "Héctor Cobos",
+"lat": -2.14759,
+"lon": -79.83303,
+"origen": "osm",
+"osm": "Ciudadela Hector Cobos, Ciudadela Los Arbolitos, Durán, Duran, Durán, Guayas, Ecuador"
+},
+{
+"n": "La Ferroviaria",
+"a": [
+"ferroviaria"
+],
+"c": "DURAN",
+"_q": "La Ferroviaria",
+"lat": -2.16984,
+"lon": -79.84482,
+"origen": "osm",
+"osm": "Avenida de la Virgen, Cdla. Ferroviaria II, Cdla. Ferrroviaria II, Cementerio General - Durán, Durán, Duran, Durán, Guayas, 092409, Ecuador"
+},
+{
+"n": "La Puntilla",
+"a": [
+"puntilla"
+],
+"c": "SAMBORONDON",
+"_q": "La Puntilla",
+"lat": -2.15532,
+"lon": -79.86553,
+"origen": "osm",
+"osm": "La Puntilla, Urbanización La Puntilla, Samborondón, Guayas, 090701, Ecuador"
+},
+{
+"n": "Entre Ríos",
+"a": [
+"entre rios"
+],
+"c": "SAMBORONDON",
+"_q": "Entre Ríos",
+"lat": -2.14889,
+"lon": -79.86945,
+"origen": "osm",
+"osm": "Entre Ríos, Ciudadela Entre Ríos, Samborondón, Guayas, 090701, Ecuador"
+},
+{
+"n": "Ciudad Celeste",
+"a": [],
+"c": "SAMBORONDON",
+"_q": "Ciudad Celeste",
+"lat": -2.05632,
+"lon": -79.85085,
+"origen": "osm",
+"osm": "Ciudad Celeste, Barranca, Samborondón, Guayas, 092302, Ecuador"
+},
+{
+"n": "Plaza Lagos",
+"a": [],
+"c": "SAMBORONDON",
+"_q": "Plaza Lagos",
+"lat": -2.0972,
+"lon": -79.87556,
+"origen": "osm",
+"osm": "Plaza Lagos, Avenida Samborondón, Samborondón, Guayas, 092302, Ecuador"
+},
+{
+"n": "Isla Mocolí",
+"a": [
+"mocoli"
+],
+"c": "SAMBORONDON",
+"_q": "Isla Mocolí",
+"lat": -2.10442,
+"lon": -79.86173,
+"origen": "osm",
+"osm": "Isla Mocolí, Samborondón, Guayas, Ecuador"
+},
+{
+"n": "Tarifa",
+"a": [],
+"c": "SAMBORONDON",
+"_q": "Tarifa",
+"lat": -1.97829,
+"lon": -79.75465,
+"origen": "osm",
+"osm": "Tarifa, Samborondón, Guayas, Ecuador"
+},
+{
+"n": "Samborondón Centro",
+"a": [
+"cabecera de samborondon",
+"samborondon"
+],
+"c": "SAMBORONDON",
+"_q": "Samborondón",
+"lat": -1.96126,
+"lon": -79.7238,
+"origen": "osm",
+"osm": "Samborondón, Guayas, Ecuador"
+},
+{
+"n": "La Aurora",
+"a": [
+"aurora"
+],
+"c": "DAULE",
+"_q": "La Aurora",
+"lat": -2.05358,
+"lon": -79.88109,
+"origen": "osm",
+"osm": "La Aurora, Daule, Guayas, 091910, Ecuador"
+},
+{
+"n": "Villa Club",
+"a": [],
+"c": "DAULE",
+"_q": "Villa Club",
+"lat": -2.02938,
+"lon": -79.90431,
+"origen": "osm",
+"osm": "Magna - Villa Club, Urb. Vistana 1000, La Aurora, Daule, Guayas, 091910, Ecuador"
+},
+{
+"n": "La Joya",
+"a": [
+"urbanizacion la joya"
+],
+"c": "DAULE",
+"_q": "La Joya",
+"lat": -2.03668,
+"lon": -79.91575,
+"origen": "osm",
+"osm": "La Joya, La Aurora, Daule, Guayas, 091910, Ecuador"
+},
+{
+"n": "Matices",
+"a": [],
+"c": "DAULE",
+"_q": "Matices",
+"lat": -2.05979,
+"lon": -79.87828,
+"origen": "osm",
+"osm": "Urbanización Matices, La Aurora, Daule, Guayas, Ecuador"
+},
+{
+"n": "Villa Italia",
+"a": [],
+"c": "DAULE",
+"_q": "Villa Italia",
+"lat": -2.05948,
+"lon": -79.93235,
+"origen": "osm",
+"osm": "Urb. Villa Italia, Daule, Guayas, 090103, Ecuador"
+},
+{
+"n": "Castilla",
+"a": [],
+"c": "DAULE",
+"_q": "Castilla",
+"lat": -2.03949,
+"lon": -79.86252,
+"origen": "osm",
+"osm": "Urbanización Castilla, Urb. Piamonte, La Aurora, Daule, Guayas, Ecuador"
+},
+{
+"n": "Daule Centro",
+"a": [
+"cabecera de daule",
+"daule"
+],
+"c": "DAULE",
+"_q": "Daule",
+"lat": -1.86417,
+"lon": -79.98041,
+"origen": "osm",
+"osm": "Daule, Guayas, Ecuador"
+},
+{
+"n": "Las Lojas",
+"a": [
+"lojas",
+"los lojas"
+],
+"c": "DAULE",
+"_q": "Las Lojas",
+"lat": -2.0177,
+"lon": -79.93487,
+"origen": "osm",
+"osm": "Las Lojas, Los Lojas, La Estragada, Los Lojas, Daule, Guayas, 091905, Ecuador"
+},
+{
+"n": "Limonal",
+"a": [
+"el limonal"
+],
+"c": "DAULE",
+"_q": "Limonal",
+"lat": -1.79267,
+"lon": -80.00614,
+"origen": "osm",
+"osm": "Limonal, Parroquia Limonal, Daule, Guayas, 091907, Ecuador"
+},
+{
+"n": "Juan Bautista Aguirre",
+"a": [
+"los tintos"
+],
+"c": "DAULE",
+"_q": "Juan Bautista Aguirre",
+"lat": -1.87572,
+"lon": -79.86223,
+"origen": "osm",
+"osm": "Juan Bautista Aguirre, Parroquia Juan Bautista Aguirre, Daule, Guayas, Ecuador"
+}
+]
+}
