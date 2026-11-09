@@ -4,7 +4,9 @@ Robot mensual de Radar Urbano.
 1. Busca en datosabiertos.gob.ec el Excel mas reciente de Homicidios Intencionales
    (Ministerio del Interior).
 2. Se queda solo con los casos del canton Guayaquil.
-3. Publica datos/homicidios_guayaquil.json, un archivo liviano que lee la app.
+3. Publica datos/homicidios_guayaquil.json, un archivo liviano que lee la app
+   (version 2.x, solo canton Guayaquil), y datos/homicidios_gran_guayaquil.json
+   (version 3 en adelante: Guayaquil, Duran, Samborondon y Daule).
 
 Si algo sale mal (portal caido, columnas cambiadas, datos sospechosos),
 NO toca el archivo anterior: la app sigue funcionando con los ultimos datos buenos.
@@ -38,6 +40,9 @@ PORTALES = [
 DATASET = "homicidios-intencionales"
 CANTON = "GUAYAQUIL"
 SALIDA = os.path.join("datos", "homicidios_guayaquil.json")
+# Gran Guayaquil (app version 3): archivo aparte para no cambiar lo que ven los testers
+CANTONES_GRAN = ["GUAYAQUIL", "DURAN", "SAMBORONDON", "DAULE"]
+SALIDA_GRAN = os.path.join("datos", "homicidios_gran_guayaquil.json")
 ESTADO = os.path.join("datos", "estado.json")
 MINIMO_CASOS = 100  # menos que esto en Guayaquil = archivo sospechoso
 COLUMNAS = ["subcircuito", "codigo_subcircuito", "distrito", "canton",
@@ -103,19 +108,25 @@ def numero(valor):
         return None
 
 
-def procesar(contenido, nombre_archivo):
+def procesar(contenido, nombre_archivo, cantones=(CANTON,)):
     df, hoja = leer_excel(contenido)
     faltan = [c for c in COLUMNAS if c not in df.columns]
     if faltan:
         raise ValueError(f"El Ministerio cambio el formato. Faltan columnas: {faltan}")
 
-    df = df[df["canton"].map(normalizar) == CANTON].copy()
+    df["canton_n"] = df["canton"].map(normalizar)
+    df = df[df["canton_n"].isin(cantones)].copy()
     df["lat"] = df["coordenada_y"].map(numero)
     df["lon"] = df["coordenada_x"].map(numero)
     df["fecha"] = pd.to_datetime(df["fecha_infraccion"], errors="coerce", dayfirst=True)
     df = df.dropna(subset=["fecha"])
-    # Coordenadas fuera de la zona de Guayaquil se descartan para el mapa
-    dentro = df["lat"].between(-2.6, -1.8) & df["lon"].between(-80.3, -79.6)
+    # Coordenadas fuera de la zona se descartan para el mapa
+    # (la zona del Gran Guayaquil es mas amplia: Daule llega mas al norte)
+    if len(cantones) > 1:
+        lat_min, lat_max, lon_min, lon_max = -3.1, -1.5, -80.5, -79.5
+    else:
+        lat_min, lat_max, lon_min, lon_max = -2.6, -1.8, -80.3, -79.6
+    dentro = df["lat"].between(lat_min, lat_max) & df["lon"].between(lon_min, lon_max)
     df["mes"] = df["fecha"].dt.strftime("%Y-%m")
 
     if len(df) < MINIMO_CASOS:
@@ -126,7 +137,7 @@ def procesar(contenido, nombre_archivo):
 
     subcircuitos = {}
     for codigo, g in df.groupby(df["codigo_subcircuito"].astype(str).str.strip()):
-        con_coord = g[g["lat"].between(-2.6, -1.8) & g["lon"].between(-80.3, -79.6)]
+        con_coord = g[g["lat"].between(lat_min, lat_max) & g["lon"].between(lon_min, lon_max)]
         subcircuitos[codigo] = {
             "nombre": normalizar(g["subcircuito"].iloc[0]),
             "distrito": normalizar(g["distrito"].iloc[0]),
@@ -135,13 +146,15 @@ def procesar(contenido, nombre_archivo):
             "lat": round(float(con_coord["lat"].mean()), 4) if len(con_coord) else None,
             "lon": round(float(con_coord["lon"].mean()), 4) if len(con_coord) else None,
         }
+        if len(cantones) > 1:
+            subcircuitos[codigo]["canton"] = g["canton_n"].iloc[0]
 
     meses = sorted(df["mes"].unique())
-    return {
+    resultado = {
         "fuente": "Ministerio del Interior - Homicidios Intencionales (datosabiertos.gob.ec)",
         "archivo_origen": nombre_archivo,
         "hoja": hoja,
-        "canton": CANTON,
+        "canton": CANTON if len(cantones) == 1 else "GRAN GUAYAQUIL",
         "primer_mes": meses[0],
         "ultimo_mes": meses[-1],
         "total_casos": int(len(df)),
@@ -150,6 +163,10 @@ def procesar(contenido, nombre_archivo):
         "eventos_formato": ["lat", "lon", "mes", "codigo_subcircuito"],
         "eventos": eventos,
     }
+    if len(cantones) > 1:
+        resultado["cantones"] = list(cantones)
+        resultado["casos_por_canton"] = {c: int((df["canton_n"] == c).sum()) for c in cantones}
+    return resultado
 
 
 def guardar_estado(ok, mensaje):
@@ -173,25 +190,46 @@ def ultimo_mes_publicado():
         return ""
 
 
+def guardar_gran_guayaquil(contenido, nombre, generado):
+    """Archivo de la version 3 (Gran Guayaquil). Si falla, no afecta al archivo principal."""
+    try:
+        gran = procesar(contenido, nombre, CANTONES_GRAN)
+        try:
+            with open(SALIDA_GRAN, encoding="utf-8") as f:
+                anterior = json.load(f).get("ultimo_mes", "")
+        except (OSError, ValueError):
+            anterior = ""
+        if anterior and gran["ultimo_mes"] < anterior:
+            return f"Gran Guayaquil: se mantiene (ya hay datos hasta {anterior})"
+        gran["generado"] = generado
+        with open(SALIDA_GRAN, "w", encoding="utf-8") as f:
+            json.dump(gran, f, ensure_ascii=False, separators=(",", ":"))
+        return f"Gran Guayaquil: {gran['total_casos']} casos, {len(gran['subcircuitos'])} subcircuitos"
+    except Exception as e:
+        return f"Gran Guayaquil: error ({e}), se mantiene el anterior"
+
+
 def main():
     try:
         locales = sys.argv[1:] or excels_subidos()
         if locales:
             # Procesa todos los Excel subidos y se queda con el de datos mas recientes
-            resultado, nombre = None, ""
+            resultado, nombre, contenido = None, "", b""
             for ruta in locales:
                 with open(ruta, "rb") as f:
-                    candidato = procesar(f.read(), os.path.basename(ruta))
+                    datos_archivo = f.read()
+                candidato = procesar(datos_archivo, os.path.basename(ruta))
                 print(f"Leido {ruta}: hasta {candidato['ultimo_mes']}")
                 if resultado is None or candidato["ultimo_mes"] > resultado["ultimo_mes"]:
-                    resultado, nombre = candidato, os.path.basename(ruta)
+                    resultado, nombre, contenido = candidato, os.path.basename(ruta), datos_archivo
         else:
             url, nombre = buscar_url_excel()
             print("Descargando:", url)
             r = requests.get(url, headers=CABECERAS, timeout=180)
             r.raise_for_status()
             nombre = nombre or url.rsplit("/", 1)[-1]
-            resultado = procesar(r.content, nombre)
+            contenido = r.content
+            resultado = procesar(contenido, nombre)
 
         anterior = ultimo_mes_publicado()
         if anterior and resultado["ultimo_mes"] < anterior:
@@ -204,6 +242,7 @@ def main():
         msg = (f"OK: {resultado['total_casos']} casos, "
                f"{resultado['primer_mes']} a {resultado['ultimo_mes']}, "
                f"{len(resultado['subcircuitos'])} subcircuitos ({nombre})")
+        msg += " | " + guardar_gran_guayaquil(contenido, nombre, resultado["generado"])
         print(msg)
         guardar_estado(True, msg)
     except Exception as e:

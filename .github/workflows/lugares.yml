@@ -1,0 +1,32 @@
+name: Robot de lugares (sugerencias)
+
+# Busca las coordenadas de los lugares nuevos de lugares/lugares_fuente.json.
+# Corre solo cuando se cambia esa lista, o a mano desde la pestana Actions.
+
+on:
+  push:
+    branches: [main]
+    paths: ["lugares/lugares_fuente.json", "lugares/geocodificar.py"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  lugares:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - run: python lugares/geocodificar.py
+      - name: Guardar
+        run: |
+          git config user.name "radar-urbano-robot"
+          git config user.email "robot@users.noreply.github.com"
+          git add datos/lugares.json datos/lugares_revisar.json
+          if git diff --cached --quiet; then echo "Sin cambios"; exit 0; fi
+          git commit -q -m "Lugares para sugerencias actualizados"
+          for intento in 1 2 3; do git push -q && break; git pull -q --rebase; done
