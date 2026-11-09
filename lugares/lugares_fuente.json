@@ -444,7 +444,9 @@
     "trinitaria",
     "la trini"
    ],
-   "c": "GUAYAQUIL"
+   "c": "GUAYAQUIL",
+   "lat": -2.2388,
+   "lon": -79.9243
   },
   {
    "n": "Cooperativa Nigeria",
