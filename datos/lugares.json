@@ -743,10 +743,9 @@
 ],
 "c": "GUAYAQUIL",
 "_q": "Isla Trinitaria",
-"lat": -2.25181,
-"lon": -79.92045,
-"origen": "osm",
-"osm": "Isla Trinitaria, Guayaquil, Guayas, Ecuador"
+"lat": -2.2388,
+"lon": -79.9243,
+"origen": "manual"
 },
 {
 "n": "Cooperativa Nigeria",
