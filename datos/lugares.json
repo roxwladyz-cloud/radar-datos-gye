@@ -22,10 +22,21 @@
 ],
 "c": "GUAYAQUIL",
 "_q": "Malecón 2000",
-"lat": -2.18736,
-"lon": -79.90086,
-"origen": "osm",
-"osm": "Malecón Eloy Alfaro, Ciudadela Ferroviaria, Hipermercados El Coral, Bellavista, Tarqui, Guayaquil, Guayas, 090615, Ecuador"
+"lat": -2.1925,
+"lon": -79.879,
+"origen": "manual"
+},
+{
+"n": "Las Peñas",
+"a": [
+"barrio las penas",
+"cerro santa ana"
+],
+"c": "GUAYAQUIL",
+"_q": "Barrio Las Peñas",
+"lat": -2.1902,
+"lon": -79.8765,
+"origen": "manual"
 },
 {
 "n": "La Bahía",
@@ -505,10 +516,9 @@
 ],
 "c": "GUAYAQUIL",
 "_q": "La Florida",
-"lat": -2.59999,
-"lon": -80.36656,
-"origen": "osm",
-"osm": "La Florida, Morro, Guayaquil, Guayas, 092201, Ecuador"
+"lat": -2.1297,
+"lon": -79.9425,
+"origen": "manual"
 },
 {
 "n": "Pascuales",
@@ -555,16 +565,6 @@
 "lon": -79.99618,
 "origen": "osm",
 "osm": "Monte Sinaí, Guayaquil, Guayas, 090809, Ecuador"
-},
-{
-"n": "Socio Vivienda",
-"a": [],
-"c": "GUAYAQUIL",
-"_q": "Socio Vivienda",
-"lat": -2.15124,
-"lon": -79.95424,
-"origen": "osm",
-"osm": "Centro de Investigaciones Biotecnológicas del Ecuador, Ciclovía de ESPOL, Gallegos Lara, Condominio Vizcaya Gardens, Guayaquil, Guayas, 090150, Ecuador"
 },
 {
 "n": "Paraíso de la Flor",
@@ -708,10 +708,9 @@
 ],
 "c": "GUAYAQUIL",
 "_q": "El Cisne",
-"lat": -2.18966,
-"lon": -79.88474,
-"origen": "osm",
-"osm": "El Cisne, Victor Manuel Rendón, Barrio de la Merced, Roca, Guayaquil, Guayas, 090312, Ecuador"
+"lat": -2.2209,
+"lon": -79.9241,
+"origen": "manual"
 },
 {
 "n": "Puerto Lisa",
@@ -788,10 +787,9 @@
 "a": [],
 "c": "GUAYAQUIL",
 "_q": "Guasmo Sur",
-"lat": -2.25265,
-"lon": -79.87553,
-"origen": "osm",
-"osm": "Mass Line - Motorcycle Assembly Line Of Ecuador, Muelle - Astillero Maridueña, Río Guayas, Guayaquil, Guayas, Ecuador"
+"lat": -2.274,
+"lon": -79.8876,
+"origen": "manual"
 },
 {
 "n": "Unión de Bananeros",
@@ -1135,10 +1133,9 @@
 ],
 "c": "DURAN",
 "_q": "Eloy Alfaro (Durán)",
-"lat": -2.18151,
-"lon": -79.80914,
-"origen": "osm",
-"osm": "UBE-Universidad Bolivariana del Ecuador, Durán, Duran, Durán, Guayas, 092405, Ecuador"
+"lat": -2.1747,
+"lon": -79.844,
+"origen": "manual"
 },
 {
 "n": "El Recreo",
@@ -1222,6 +1219,17 @@
 "lon": -79.81828,
 "origen": "osm",
 "osm": "Cerro de las cabras, UBE-Universidad Bolivariana del Ecuador, Durán, Duran, Durán, Guayas, 092405, Ecuador"
+},
+{
+"n": "El Arbolito",
+"a": [
+"arbolito"
+],
+"c": "DURAN",
+"_q": "El Arbolito",
+"lat": -2.151,
+"lon": -79.8304,
+"origen": "manual"
 },
 {
 "n": "Héctor Cobos",
