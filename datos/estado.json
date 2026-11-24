@@ -1,5 +1,5 @@
 {
-  "revisado": "2026-11-20T15:00:49+00:00",
-  "ok": true,
-  "mensaje": "OK: 1777 casos, 2026-01 a 2026-10, 196 subcircuitos (mdi_homicidiosintencionales_pm_2026_enero_octubre.xlsx) | Gran Guayaquil: 2197 casos, 238 subcircuitos"
+  "revisado": "2026-11-24T00:49:28+00:00",
+  "ok": false,
+  "mensaje": "Se mantienen los datos anteriores. Error: No se pudo consultar el portal:\nhttps://datosabiertos.gob.ec: 403 Client Error: Forbidden for url: https://datosabiertos.gob.ec/api/3/action/package_show?id=homicidios-intencionales\nhttps://www.datosabiertos.gob.ec: 403 Client Error: Forbidden for url: https://www.datosabiertos.gob.ec/api/3/action/package_show?id=homicidios-intencionales\nhttps://datosabiertos.presidencia.gob.ec: 403 Client Error: Forbidden for url: https://datosabiertos.presidencia.gob.ec/api/3/action/package_show?id=homicidios-intencionales"
 }
